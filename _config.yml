@@ -2,5 +2,6 @@ theme: jekyll-theme-slate
 title: Samiikon Blog
 description: Python, Flask, CouchDB, backend in general
 permalink: pretty
-author: 
-  twitter: samiikon
+twitter: 
+  username: samiikon
+  card: summary

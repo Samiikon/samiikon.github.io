@@ -1,7 +1,9 @@
 ---
 title: "Generic first blogpost"
 date: 2018-05-12
-author: Sami
+author: samiikon
+twitter: samiikon
+description: "First blog post"
 ---
 # Generic first blogpost
 
