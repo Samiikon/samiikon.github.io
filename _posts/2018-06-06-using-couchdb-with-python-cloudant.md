@@ -1,14 +1,14 @@
 ---
-title: "Using CouchDB with Cloudant-python"
+title: "Using CouchDB with python-cloudant"
 date: 2018-06-06
 author: samiikon
 twitter: samiikon
-description: "Guide for cloudant-python with CouchDb"
+description: "Guide for python-cloudant with CouchDb"
 ---
-# Using CouchDB with Cloudant-python
+# Using CouchDB with python-cloudant
 _By Sami - June 6, 2018_
 
-This guide goes through installation and basic usage of cloudant-python library with CouchDB. 
+This guide goes through installation and basic usage of python-cloudant library with CouchDB. 
 
 ## Prerequisites
 This guide is written using elementary OS Loki(Ubuntu 16.04 LTS). You should have **CouchDB** installed and working locally. Also you should have **virtualenv** and **pip** for Python installed and working. I presume that you know what basic command line commands like `mkdir` and `cd` do.
@@ -44,7 +44,7 @@ Python 3.5.2
 ```
 
 ### Pip installations
-If the Python version is 3 as it should be, we can continue to install cloudant-python package with pip.
+If the Python version is 3 as it should be, we can continue to install python-cloudant package with pip.
 
 ```bash
 (cloudc) ~/cloudcouch/venv$ pip install cloudant
@@ -179,4 +179,4 @@ Deleting a document is even easier than creating and modifying them.
 ```
 
 ## Wrap up
-So now we've gone through installation and basic usage of cloudant-python library with CouchDB. These steps should get you started if you are new to CouchDB, or just want a simple way to interact with it via Python. I might write few more guides for using cloudant-python in the future. 
+So now we've gone through installation and basic usage of python-cloudant library with CouchDB. These steps should get you started if you are new to CouchDB, or just want a simple way to interact with it via Python. I might write few more guides for using python-cloudant in the future. 
