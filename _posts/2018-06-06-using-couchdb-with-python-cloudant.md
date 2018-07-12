@@ -1,14 +1,12 @@
 ---
 title: "Using CouchDB with python-cloudant"
 date: 2018-06-06
-author: samiikon
+author: Sami
 twitter: samiikon
 description: "Guide for python-cloudant with CouchDb"
 ---
-# Using CouchDB with python-cloudant
-_By Sami - June 6, 2018_
 
-This guide goes through installation and basic usage of python-cloudant library with CouchDB. 
+This guide goes through installation and basic usage of python-cloudant library with CouchDB.
 
 ## Prerequisites
 This guide is written using elementary OS Loki(Ubuntu 16.04 LTS). You should have **CouchDB** installed and working locally. Also you should have **virtualenv** and **pip** for Python installed and working. I presume that you know what basic command line commands like `mkdir` and `cd` do.
@@ -23,7 +21,7 @@ First, let's make directory for this project and another directory in it for our
 ```
 
 ### Creating the virtual environment
-Next, we go to `cloudcouch/venv` directory and create the virtual environment there. 
+Next, we go to `cloudcouch/venv` directory and create the virtual environment there.
 
 ```bash
 ~/cloudcouch$ cd venv
@@ -35,7 +33,7 @@ Installing setuptools, pip, wheel...done.
 
 That `-p python3` flag in the virtualenv command forces the created virtual environment to use Python 3. `cloudc` is just the name for the virtual environment. I cut out some of the output from installation process.
 
-Next, we activate the just created virtual environment and test that it actually was created with Python 3. Note that your Python 3 version might not be exactly same as mine. 
+Next, we activate the just created virtual environment and test that it actually was created with Python 3. Note that your Python 3 version might not be exactly same as mine.
 
 ```bash
 ~/cloudcouch/venv$ . cloudc/bin/activate
@@ -50,9 +48,9 @@ If the Python version is 3 as it should be, we can continue to install python-cl
 (cloudc) ~/cloudcouch/venv$ pip install cloudant
 Collecting cloudant
 ...
-Successfully installed cloudant-2.8.1 ... 
+Successfully installed cloudant-2.8.1 ...
 (cloudc) ~/cloudcouch/venv$ cd ..
-(cloudc) ~/cloudcouch$ 
+(cloudc) ~/cloudcouch$
 ```
 
 Again I cut out some of the output from pip installation. Also we came back up to root folder of our project, `cloudcouch`. Next we can finally start working with the CouchDB with our freshly installed cloudant package.
@@ -60,7 +58,7 @@ Again I cut out some of the output from pip installation. Also we came back up t
 ## Databases in CouchDB
 
 ### Are you alive, CouchDB?
-First we should check that CouchDB is actually running. Easiest way to do this is by either going to address [http://localhost:5984](http://localhost:5984) with browser or running following command in terminal: `curl -X GET "http://localhost:5984"` Both ways should return following data: 
+First we should check that CouchDB is actually running. Easiest way to do this is by either going to address [http://localhost:5984](http://localhost:5984) with browser or running following command in terminal: `curl -X GET "http://localhost:5984"` Both ways should return following data:
 
 ```json
 {
@@ -76,10 +74,10 @@ Now that we know that local CouchDB is alive and running, we can start tinkering
 
 ```bash
 (cloudc) ~/cloudcouch$ python
-Python 3.5.2 (default, Nov 23 2017, 16:37:01) 
+Python 3.5.2 (default, Nov 23 2017, 16:37:01)
 [GCC 5.4.0 20160609] on linux
 Type "help", "copyright", "credits" or "license" for more information.
->>> 
+>>>
 ```
 
 ### Import cloudant and connect to CouchDB
@@ -93,7 +91,7 @@ To start using the cloudant package, we need to import it. More specifically, we
 
 You should replace `yourUsername` and `yourPassword` with your specific credentials you've set for your local CouchDB. We use `connect` argument to connect automatically when we create our CouchDB object. If you don't give `connect=True`, you can also manually connect using `couch.connect()`. `auto_renew` argument is there to keep our connection to CouchDB alive without us manually connecting back to it from time to time.
 
-After that we connect to the CouchDB and for testing purposes use the `all_dbs()` function to confirm that everything works. 
+After that we connect to the CouchDB and for testing purposes use the `all_dbs()` function to confirm that everything works.
 
 ```python
 >>> couch.all_dbs()
@@ -169,7 +167,7 @@ Modifying data in a document is simple. Just modify data and save it.
 {'_rev': '3-5b29decff64801c67521b8222fe5a3ae', 'name': 'apple', '_id': '1', 'price': 3.5}
 ```
 
-As you can see, modifying data in existing fields, adding new fields and deleting fields can be done easily. Just remember not to touch `_rev`-field(revision). It is used by CouchDB to handle conflict situations when more than one users are modifying data in same document. 
+As you can see, modifying data in existing fields, adding new fields and deleting fields can be done easily. Just remember not to touch `_rev`-field(revision). It is used by CouchDB to handle conflict situations when more than one users are modifying data in same document.
 
 ### Deleting document
 Deleting a document is even easier than creating and modifying them.
@@ -179,4 +177,4 @@ Deleting a document is even easier than creating and modifying them.
 ```
 
 ## Wrap up
-So now we've gone through installation and basic usage of python-cloudant library with CouchDB. These steps should get you started if you are new to CouchDB, or just want a simple way to interact with it via Python. I might write few more guides for using python-cloudant in the future. 
+So now we've gone through installation and basic usage of python-cloudant library with CouchDB. These steps should get you started if you are new to CouchDB, or just want a simple way to interact with it via Python. I might write few more guides for using python-cloudant in the future.

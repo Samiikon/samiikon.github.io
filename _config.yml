@@ -1,7 +1,9 @@
-theme: jekyll-theme-slate
+theme: minima
 title: Samiikon Blog
+author: Sami Ikonen
 description: Python, Flask, CouchDB, backend in general
 permalink: pretty
-twitter: 
-  username: samiikon
-  card: summary
+twitter_username: samiikon
+github_username: samiikon
+header_pages:
+ - index.md
